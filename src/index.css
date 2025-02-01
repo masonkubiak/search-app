@@ -1,0 +1,11 @@
+* {
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background: rgb(251,241,255);
+    background: radial-gradient(circle, rgb(250, 244, 252) 23%, rgba(253,246,255,1) 100%);
+    background-position: top;
+}
