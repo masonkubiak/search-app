@@ -3,20 +3,7 @@ import { FaSearch } from "react-icons/fa";
 import './SearchBar.css'
 
 function SearchBar({ searchTerm, setSearchTerm }) {
-
-    // const fetchData = (value) => {
-    //     const jsonData = data
-    //     fetch("../hi.json").then(() => {
-    //         const results = jsonData.filter((jsonData) => {
-    //             const unique = [...new Set(data.map(item => item.product))];
-    //             console.log(unique);
-    //             return value && jsonData && jsonData.product && jsonData.product.toLowerCase().includes(value);
-    //         });
-    //         setResults(results);
-    //     })
-    // }
-
-
+    // Renders a search bar for terms to be typed into
     const handleChange = (value) => {
         setSearchTerm(value)
     }

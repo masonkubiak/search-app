@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './SearchResultsList.css';
 
 function SearchResultsList({ results, setProductSelection, setSearchTerm }) {
+    // Renders a list of the search results
     return (
         <div className="results-list">
             {results.map((result, index) => {

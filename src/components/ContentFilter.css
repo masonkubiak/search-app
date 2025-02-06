@@ -1,0 +1,37 @@
+.content-list {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.content-head {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 20px;
+    align-items: center;
+    font-weight: bold;
+    color: var(--darkest-purple);
+}
+
+.content-element {
+    display: flex;
+    flex-direction: row;
+}
+
+.content-text-input {
+    width: 75%;
+    background-color: var(--off-white);
+    border-radius: 10px;
+    box-shadow: 0 0 8px #ddd;
+    padding-left: 10px;
+}
+
+::placeholder {
+    color: var(--purple);
+    opacity: 1;
+}
+
+::-ms-input-placeholder {
+    color: var(--purple);
+}

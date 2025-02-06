@@ -1,10 +1,10 @@
+import './Header.css';
 
-function Header(){
-
-    return(
+function Header() {
+    //TODO: make this look better
+    return (
         <header>
-            <h1>website</h1>
-            <hr></hr>
+            <h1>What do customers think of...</h1>
         </header>
     );
 }

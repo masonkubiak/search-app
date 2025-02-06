@@ -1,0 +1,6 @@
+header {
+    text-align: center;
+    padding-top: 1rem;
+    background-color: var(--purple-opacity);
+    color: var(--darkest-purple);
+}

@@ -1,0 +1,43 @@
+.not-found {
+    height: 74vh;
+    background-color: var(--off-white);
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--darkest-purple);
+}
+
+.result-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 74vh;
+    overflow-y: scroll;
+    gap: 5px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.result-element {
+    border-radius: 10px;
+    background-color: var(--off-white);
+    padding: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.result-head {
+    font-weight: bold;
+}
+
+.secondary {
+    color: var(--purple);
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.result-body {
+    padding: .25rem;
+}

@@ -1,0 +1,23 @@
+.filter-head {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    background-color: var(--off-white);
+    font-weight: bold;
+    color: var(--darkest-purple);
+}
+
+.filter-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 10px;
+    background-color: var(--lightest-purple);
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    color: var(--darkest-purple);
+}
+
+.filter-wrapper {
+    background-color: var(--lightest-purple);
+    border-radius: 10px;
+}

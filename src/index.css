@@ -1,11 +1,25 @@
-* {
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --off-white: #f4f1f7;
+    --lightest-purple: #efe3f7;
+    --lighter-purple: #e2caec;
+    --light-purple: #e0c5ee;
+    --purple: #9E81AF;
+    --darker-purple: #734b86;
+    --darkest-purple: #403445;
+    --purple-opacity: #9e81af46;
 }
 
-body{
-    background: rgb(251,241,255);
-    background: radial-gradient(circle, rgb(250, 244, 252) 23%, rgba(253,246,255,1) 100%);
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+}
+
+body {
+    background: rgb(251, 241, 255);
+    background: radial-gradient(circle, var(--lightest-purple) 23%, var(--off-white) 100%);
     background-position: top;
 }
