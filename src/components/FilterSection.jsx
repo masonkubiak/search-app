@@ -6,7 +6,6 @@ import "./FilterSection.css"
 function FilterSection({ data, setDateFilterCheck, inputtedDate, setInputtedDate, setContentFilterCheck, filterByPhrase, setFilterByPhrase, selectedSources, setSelectedSources }) {
     // Returns the Filter section and the filters within it
     // Filters the results based on the specifiers
-    console.log(selectedSources);
     return (<div className="filter-wrapper">
         <div className='filter-head'><p>Filters</p></div>
         <div className="filter-list">

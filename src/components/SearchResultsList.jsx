@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import './SearchResultsList.css';
 
 function SearchResultsList({ results, setProductSelection, setSearchTerm }) {

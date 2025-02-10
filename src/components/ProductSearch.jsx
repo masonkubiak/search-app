@@ -7,7 +7,6 @@ function ProductSearch({ data, productSelection, setProductSelection }) {
 
     const uniqueProducts = [...new Set(data.map(item => item.product))];
     const [searchTerm, setSearchTerm] = useState("")
-    console.log(uniqueProducts);
     const results = [];
 
     if (searchTerm !== "") {

@@ -17,7 +17,6 @@ function App() {
   var filteredData = data.filter(item => item.product === productSelection).filter(({ source }) => selectedSources.some(filtered => source.match(filtered)));
   if (dateFilterCheck) {
     filteredData = filteredData.filter(item => {
-      console.log(new Date(item.date));
       return compareDates(inputtedDate, new Date(item.date));
     });
   }
