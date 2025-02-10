@@ -5,7 +5,7 @@ import ContentFilter from './ContentFIlter';
 import ResetButton from './ResetButton';
 import "./FilterSection.css"
 
-function FilterSection({ data }) {
+function FilterSection({ data, setDateFilterCheck, setInputtedDate, setContentFilterCheck, filterByPhrase, setFilterByPhrase }) {
     // Returns the Filter section and the filters within it
     // Filters the results based on the specifiers
     return (<div className="filter-wrapper">
@@ -15,12 +15,12 @@ function FilterSection({ data }) {
                 <SourceFilter data={data} />
             </div>
             <div className='date-picker'>
-                <DateFilter data={data} />
+                <DateFilter data={data} setDateFilterCheck={setDateFilterCheck} setInputtedDate={setInputtedDate} />
             </div>
             <div className='content-search'>
-                <ContentFilter data={data} />
+                <ContentFilter data={data} setContentFilterCheck={setContentFilterCheck} filterByPhrase={filterByPhrase} setFilterByPhrase={setFilterByPhrase}/>
             </div>
-            <div className="reset-button">
+            <div className="reset-button" setContentFilterCheck={setContentFilterCheck} setDateFilterCheck={setDateFilterCheck} setInputtedDate={setInputtedDate} setFilterByPhrase={setFilterByPhrase}>
                 <ResetButton />
             </div>
         </div>
