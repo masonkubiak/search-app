@@ -1,9 +1,10 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
 import data from './hi.json';
-import ProductSearch from './components/ProductSearch.jsx'
+import ProductSearch from './components/ProductSearch.jsx';
 import FilterSection from './components/FilterSection.jsx';
-import ResultsSection from './components/ResultsSection.jsx'
+import ResultsSection from './components/ResultsSection.jsx';
+import { compareDates } from './utils.js';
 
 function App() {
   const [productSelection, setProductSelection] = useState();
@@ -11,21 +12,20 @@ function App() {
   const [dateFilterCheck, setDateFilterCheck] = useState(false);
   const [contentFilterCheck, setContentFilterCheck] = useState(false);
   const [filterByPhrase, setFilterByPhrase] = useState("");
-  console.log("date filter currently: " + dateFilterCheck);
-  console.log(productSelection);
-  var filteredData = data.filter(item => item.product === productSelection);
-  // .filter(item => filteredSources.includes(item.source))
+  const [selectedSources, setSelectedSources] = useState([...new Set(data.map(item => item.source))]);
+
+  var filteredData = data.filter(item => item.product === productSelection).filter(({ source }) => selectedSources.some(filtered => source.match(filtered)));
   if (dateFilterCheck) {
-    filteredData = filteredData.filter(item => Date.parse(item.date) >= inputtedDate);
+    filteredData = filteredData.filter(item => {
+      console.log(new Date(item.date));
+      return compareDates(inputtedDate, new Date(item.date));
+    });
   }
 
   if (contentFilterCheck) {
     filteredData = filteredData.filter(item => item.content.toLowerCase().includes(filterByPhrase));
   }
 
-  
-
-  console.log(filteredData);
   return (
     <>
       <div>
@@ -35,7 +35,7 @@ function App() {
           </div>
           <div className="content-wrapper">
             <div className="left-bar">
-              <FilterSection data={data} setDateFilterCheck={setDateFilterCheck} setInputtedDate={setInputtedDate} setContentFilterCheck={setContentFilterCheck} filterByPhrase={filterByPhrase} setFilterByPhrase={setFilterByPhrase} />
+              <FilterSection data={data} setDateFilterCheck={setDateFilterCheck} setInputtedDate={setInputtedDate} setContentFilterCheck={setContentFilterCheck} filterByPhrase={filterByPhrase} setFilterByPhrase={setFilterByPhrase} selectedSources={selectedSources} setSelectedSources={setSelectedSources} />
             </div>
             <div className="right-bar">
               <ResultsSection data={data} productSelection={productSelection} filteredData={filteredData} />

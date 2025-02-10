@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './SearchResultsList.css';
 
 function SearchResultsList({ results, setProductSelection, setSearchTerm }) {
@@ -10,6 +10,7 @@ function SearchResultsList({ results, setProductSelection, setSearchTerm }) {
                     setProductSelection(result);
                     setSearchTerm(result);
                     console.log(result);
+                    setSearchTerm('');
                 }}>{result}</div>)
             })}
         </div>

@@ -10,9 +10,9 @@ function ContentFilter({ data, setContentFilterCheck, filterByPhrase, setFilterB
         setFilterByPhrase(value)
     }
     return (<div className="content-list">
-        <div className="content-head"><input type="checkbox" className="content-check-input" onChange={toggleCheck}/>Content</div>
+        <div className="content-head"><input type="checkbox" className="content-check-input" onChange={toggleCheck} />Content</div>
         <div className="content-element">
-            <input placeholder="Start typing..." value={filterByPhrase} className="content-text-input" onChange={(e) => handleChange(e.target.value)}/>
+            <input placeholder="Start typing..." value={filterByPhrase} className="content-text-input" onChange={(e) => handleChange(e.target.value)} />
         </div>
     </div>);
 }
