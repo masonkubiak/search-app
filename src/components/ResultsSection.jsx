@@ -1,6 +1,6 @@
 import './ResultsSection.css'
 
-function ResultsSection({ data, productSelection, filteredData }) {
+function ResultsSection({ filteredData }) {
     //Returns a "Product not found" page if no product has been selected
     //Otherwise, returns a list of reviews for that product
 
@@ -12,9 +12,6 @@ function ResultsSection({ data, productSelection, filteredData }) {
     } else {
         return (
             <div className='result-wrapper'>
-                {/* Don't filter here directly, just pass data down. Always going to filter based on array of sources
-                at least 1 will have to be checked, then others only get filtered when it is checked 
-                const */}
                 {filteredData.map((item, i) => {
                     return (<div className="result-element" key={i}>
                         <div className="result-head">{item.source} <span className='secondary'>{item.user}</span></div>

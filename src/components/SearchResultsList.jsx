@@ -9,7 +9,6 @@ function SearchResultsList({ results, setProductSelection, setSearchTerm }) {
                 return (<div key={index} onClick={() => {
                     setProductSelection(result);
                     setSearchTerm(result);
-                    console.log(result);
                     setSearchTerm('');
                 }}>{result}</div>)
             })}

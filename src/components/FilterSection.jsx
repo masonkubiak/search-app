@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
 import DateFilter from './DateFilter';
 import SourceFilter from './SourceFilter';
 import ContentFilter from './ContentFIlter';
-import ResetButton from './ResetButton';
 import "./FilterSection.css"
 
-function FilterSection({ data, setDateFilterCheck, setInputtedDate, setContentFilterCheck, filterByPhrase, setFilterByPhrase, selectedSources, setSelectedSources }) {
+function FilterSection({ data, setDateFilterCheck, inputtedDate, setInputtedDate, setContentFilterCheck, filterByPhrase, setFilterByPhrase, selectedSources, setSelectedSources }) {
     // Returns the Filter section and the filters within it
     // Filters the results based on the specifiers
     console.log(selectedSources);
@@ -16,14 +14,11 @@ function FilterSection({ data, setDateFilterCheck, setInputtedDate, setContentFi
                 <SourceFilter data={data} selectedSources={selectedSources} setSelectedSources={setSelectedSources} />
             </div>
             <div className='date-picker'>
-                <DateFilter data={data} setDateFilterCheck={setDateFilterCheck} setInputtedDate={setInputtedDate} />
+                <DateFilter setDateFilterCheck={setDateFilterCheck} inputtedDate={inputtedDate} setInputtedDate={setInputtedDate} />
             </div>
             <div className='content-search'>
-                <ContentFilter data={data} setContentFilterCheck={setContentFilterCheck} filterByPhrase={filterByPhrase} setFilterByPhrase={setFilterByPhrase} />
+                <ContentFilter setContentFilterCheck={setContentFilterCheck} filterByPhrase={filterByPhrase} setFilterByPhrase={setFilterByPhrase} />
             </div>
-            {/* <div className="reset-button" data={data} setContentFilterCheck={setContentFilterCheck} setDateFilterCheck={setDateFilterCheck} setInputtedDate={setInputtedDate} setFilterByPhrase={setFilterByPhrase} setSelectedSources={setSelectedSources}>
-                <ResetButton />
-            </div> */}
         </div>
     </div>);
 }

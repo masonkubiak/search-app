@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import data from './hi.json';
+import data from './data.json';
 import ProductSearch from './components/ProductSearch.jsx';
 import FilterSection from './components/FilterSection.jsx';
 import ResultsSection from './components/ResultsSection.jsx';
@@ -35,10 +35,10 @@ function App() {
           </div>
           <div className="content-wrapper">
             <div className="left-bar">
-              <FilterSection data={data} setDateFilterCheck={setDateFilterCheck} setInputtedDate={setInputtedDate} setContentFilterCheck={setContentFilterCheck} filterByPhrase={filterByPhrase} setFilterByPhrase={setFilterByPhrase} selectedSources={selectedSources} setSelectedSources={setSelectedSources} />
+              <FilterSection data={data} setDateFilterCheck={setDateFilterCheck} inputtedDate={inputtedDate} setInputtedDate={setInputtedDate} setContentFilterCheck={setContentFilterCheck} filterByPhrase={filterByPhrase} setFilterByPhrase={setFilterByPhrase} selectedSources={selectedSources} setSelectedSources={setSelectedSources} />
             </div>
             <div className="right-bar">
-              <ResultsSection data={data} productSelection={productSelection} filteredData={filteredData} />
+              <ResultsSection filteredData={filteredData} />
             </div>
           </div>
         </div>

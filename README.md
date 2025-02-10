@@ -1,8 +1,8 @@
-# React + Vite
+# Review Search App
+*developed using React and Vite*
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Features:
+- Takes data from a JSON file
+- Search for different products, get the reviews for those products
+- Filter results based on where the review came from, when the review was published, and what keywords the review contains
+- Dynamic list, as long as the objects are in the same format as the ones in `data.json` adding new sources, reviews, etc. will update the displayed results accordingly

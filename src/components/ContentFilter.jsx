@@ -1,8 +1,7 @@
 import "./ContentFilter.css";
 
-function ContentFilter({ data, setContentFilterCheck, filterByPhrase, setFilterByPhrase }) {
+function ContentFilter({ setContentFilterCheck, filterByPhrase, setFilterByPhrase }) {
     // Filters results based on content typed into search bar
-    // TODO: develop functionality of content filter
     const toggleCheck = () => {
         setContentFilterCheck(prevIsChecked => !prevIsChecked);
     }

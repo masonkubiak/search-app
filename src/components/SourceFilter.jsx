@@ -2,12 +2,11 @@ import { useState, useEffect } from 'react';
 import './SourceFilter.css'
 function SourceFilter({ data, selectedSources, setSelectedSources }) {
     // Filters results based on what site the review came from
-    // TODO: develop funcitonality of source filter
     const uniqueSources = [...new Set(data.map(item => item.source))];
     const [isChecked, setIsChecked] = useState(new Array(uniqueSources.length).fill(true));
     console.log("source check: " + isChecked);
     useEffect(() => {
-        setIsChecked(uniqueSources.map((index) => true));
+        setIsChecked(uniqueSources.map((_index) => true));
     }, []);
     const isCheckboxChecked = (index, checked) => {
         isChecked[index] = checked;
