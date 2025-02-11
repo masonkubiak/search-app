@@ -16,10 +16,9 @@ function App() {
 
   var filteredData = data.filter(item => item.product === productSelection).filter(({ source }) => selectedSources.some(filtered => source.match(filtered)));
   if (dateFilterCheck) {
-    filteredData = filteredData.filter(item => {
-      return compareDates(inputtedDate, new Date(item.date));
-    });
-  }
+      filteredData = filteredData.filter(item => compareDates(inputtedDate, new Date(item.date)));
+    };
+  
 
   if (contentFilterCheck) {
     filteredData = filteredData.filter(item => item.content.toLowerCase().includes(filterByPhrase));

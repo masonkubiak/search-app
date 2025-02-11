@@ -20,4 +20,5 @@
 .filter-wrapper {
     background-color: var(--lightest-purple);
     border-radius: 10px;
+    width: 100%;
 }
