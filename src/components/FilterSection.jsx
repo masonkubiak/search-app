@@ -1,6 +1,6 @@
 import DateFilter from './DateFilter';
 import SourceFilter from './SourceFilter';
-import ContentFilter from './ContentFIlter';
+import ContentFilter from './ContentFilter';
 import "./FilterSection.css"
 
 function FilterSection({ data, setDateFilterCheck, inputtedDate, setInputtedDate, setContentFilterCheck, filterByPhrase, setFilterByPhrase, selectedSources, setSelectedSources }) {
