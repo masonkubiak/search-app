@@ -8,5 +8,5 @@
 - Dynamic list, as long as the objects are in the same format as the ones in `data.json` adding new sources, reviews, etc. will update the displayed results accordingly
 
 # Screenshots
-![Screenshot of inactive page](./assets/inactive.png)
-![Screenshot of active page](./assets/active.png)
+![Screenshot of inactive page](./src/assets/inactive.png)
+![Screenshot of active page](./src/assets/active.png)
